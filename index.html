@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница - Лабораторная работа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Добро пожаловать! 🌟</h1>
+            <p class="subtitle">Главная страница моей лабораторной работы</p>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>О проекте</h2>
+                <p>Этот проект создан в рамках изучения веб-технологий и включает в себя:</p>
+                <ul class="features">
+                    <li>Адаптивный дизайн</li>
+                    <li>CSS анимации</li>
+                    <li>Современные веб-стандарты</li>
+                    <li>Интерактивные элементы</li>
+                </ul>
+            </section>
+
+            <section class="about">
+                <h2>Обо мне</h2>
+                <div class="profile">
+                    <div class="avatar">👩‍💻</div>
+                    <div class="info">
+                        <p><strong>Имя:</strong> Лиза</p>
+                        <p><strong>Специализация:</strong> Веб-разработка</p>
+                        <p><strong>Цель:</strong> Создавать красивые и функциональные сайты</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="navigation">
+                <h2>Навигация</h2>
+                <div class="nav-buttons">
+                    <a href="home.html" class="btn">Перейти на Home</a>
+                    <button class="btn" onclick="showMessage()">Нажми меня!</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="signature">Сделано с ❤️ и JavaScript</p>
+            <p class="copyright">© 2025 Лабораторная работа</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert('Привет! Отличная работа с лабораторной! 🎉');
+        }
+
+        // Добавляем дополнительные частицы для фейерверков
+        document.addEventListener('DOMContentLoaded', function() {
+            const fireworks = document.querySelectorAll('.firework');
+            fireworks.forEach(firework => {
+                for(let i = 0; i < 4; i++) {
+                    const span = document.createElement('span');
+                    firework.appendChild(span);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
